@@ -1,0 +1,39 @@
+<p mat-dialog-title>create works!</p>
+<div class="example-container" mat-dialog-content>
+  <form [formGroup]="formCreate" (ngSubmit)="update(formCreate)">
+    <mat-form-field>
+      <input formControlName="firstname" matInput placeholder="Nombre">
+    </mat-form-field>
+
+    <mat-error *ngIf="formCreate.controls['firstname'].errors?.required">
+      Nombre es <strong>requerido</strong>
+    </mat-error>
+    <mat-form-field>
+      <input matInput formControlName="lastname" placeholder="Apellido">
+    </mat-form-field>
+    <mat-error *ngIf="formCreate.controls['lastname'].errors?.required">
+      Apellido es <strong>requerido</strong>
+    </mat-error>
+    <mat-form-field class="example-full-width">
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="birthdate"
+        placeholder="Fecha de nacimiento">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-error *ngIf="formCreate.controls['birthdate'].errors?.required">
+      Fecha de nacimiento es <strong>requerido</strong>
+    </mat-error>
+    <mat-form-field>
+      <input matInput formControlName="identification" placeholder="Identificación">
+    </mat-form-field>
+    <mat-error *ngIf="formCreate.controls['identification'].errors?.required">
+      Numero de Identificación es <strong>requerido</strong>
+    </mat-error>
+
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="update(formCreate)">Ok</button>
+</div>

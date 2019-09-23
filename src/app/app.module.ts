@@ -5,20 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MaterialModulesModule } from './modules/material-modules/material-modules.module';
+import { HomeComponent } from './pages/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateComponent } from './modals/create/create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Utils } from '../utils/utils';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModulesModule
+    MaterialModulesModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CreateComponent]
 })
 export class AppModule { }
