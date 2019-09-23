@@ -10,7 +10,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateComponent } from './modals/create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Utils } from '../utils/utils';
 
 @NgModule({
   declarations: [

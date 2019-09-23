@@ -1,15 +1,10 @@
-<mat-toolbar>
+<mat-toolbar class="nav" color="primary">
   <span> Base de datos de clientes</span>
   <span class="rigth"></span>
   <span>{{count}} Registros</span>
 </mat-toolbar>
 <div class="container">
   <div class="button-row">
-    <button mat-raised-button (click)="noValidation()">Insertar sin validacion</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
-    <a mat-raised-button routerLink=".">Link</a>
+    <button mat-raised-button (click)="noValidation()">Insertar</button>
   </div>
 </div>

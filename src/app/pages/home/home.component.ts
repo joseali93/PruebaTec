@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit {
         (response: any) => {
           console.log(response);
           this.information();
+          this.openSnackBar('Información insertada correctamente');
 
         },
         (error: any) => {
