@@ -41,11 +41,11 @@ $ ng build
 
 PruebaTec usa las siguientes funcionalidades.
 
-| Plugin           | README                                        |
-| ---------------- | --------------------------------------------- |
-| Forms            | [https://angular.io/guide/dynamic-form][pldb] |
-| Material Angular | [https://material.angular.io/][plgh]          |
-| HTTP             | [https://angular.io/guide/http][plgd]         |
+| Plugin           | README                                  |
+| ---------------- | --------------------------------------- |
+| Forms            | [https://angular.io/guide/dynamic-form] |
+| Material Angular | [https://material.angular.io/]          |
+| HTTP             | [https://angular.io/guide/http]         |
 
 ## License
 
