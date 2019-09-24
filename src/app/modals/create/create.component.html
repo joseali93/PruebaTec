@@ -1,17 +1,18 @@
-<p mat-dialog-title>create works!</p>
+<p mat-dialog-title>Inscribete!</p>
+<p>Diligencia la informacón y solicita tu credito</p>
 <div class="example-container" mat-dialog-content>
   <form [formGroup]="formCreate" (ngSubmit)="update(formCreate)">
     <mat-form-field>
       <input formControlName="firstname" matInput placeholder="Nombre">
     </mat-form-field>
 
-    <mat-error *ngIf="formCreate.controls['firstname'].errors?.required">
+    <mat-error *ngIf="formCreate.controls['firstname'].errors?.required&&flag">
       Nombre es <strong>requerido</strong>
     </mat-error>
     <mat-form-field>
       <input matInput formControlName="lastname" placeholder="Apellido">
     </mat-form-field>
-    <mat-error *ngIf="formCreate.controls['lastname'].errors?.required">
+    <mat-error *ngIf="formCreate.controls['lastname'].errors?.required&&flag">
       Apellido es <strong>requerido</strong>
     </mat-error>
     <mat-form-field class="example-full-width">
@@ -20,20 +21,23 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-error *ngIf="formCreate.controls['birthdate'].errors?.required">
+    <mat-error *ngIf="formCreate.controls['birthdate'].errors?.required&&flag">
       Fecha de nacimiento es <strong>requerido</strong>
     </mat-error>
     <mat-form-field>
       <input matInput formControlName="identification" placeholder="Identificación">
     </mat-form-field>
-    <mat-error *ngIf="formCreate.controls['identification'].errors?.required">
+    <mat-error *ngIf="formCreate.controls['identification'].errors?.required&&flag">
       Numero de Identificación es <strong>requerido</strong>
+    </mat-error>
+    <mat-error *ngIf="formCreate.controls['identification'].errors?.pattern&&flag">
+      Numero de Identificación debe tener solo <strong>numeros</strong>
     </mat-error>
 
   </form>
 </div>
 
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button (click)="update(formCreate)">Ok</button>
+  <button mat-button color="accent" (click)="onNoClick()">No, gracias</button>
+  <button mat-raised-button (click)="update(formCreate)" color="primary">Ok</button>
 </div>

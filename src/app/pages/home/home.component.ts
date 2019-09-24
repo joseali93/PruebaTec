@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   public count: number;
@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
   public noValidation() {
     const dialogRef = this.dialog.open(CreateComponent, {
       width: '500px',
-      data: {}
+      data: {},
+      disableClose: true
     });
     dialogRef.afterClosed().subscribe((result: IUser) => {
       if (result) {

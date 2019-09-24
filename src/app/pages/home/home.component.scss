@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.rigth {
+  flex: 1 1 auto;
+}
+
+.container {
+  background-color: $start-3;
+  width: 100%;
+  height: 100%;
+}
+
+.button-row {
+  padding: 3px;
+}
+
+.update {
+  background-color: $start-2;
+}
+
+.count {
+  color: $start-5;
+}

@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import '~@angular/material/theming';
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+$md-primary: (50 : #ffece5,
+  100 : #ffcebe,
+  200 : #ffae93,
+  300 : #fe8e67,
+  400 : #fe7547,
+  500 : #fe5d26,
+  600 : #fe5522,
+  700 : #fe4b1c,
+  800 : #fe4117,
+  900 : #fd300d,
+  A100 : #ffffff,
+  A200 : #fff6f5,
+  A400 : #ffc9c2,
+  A700 : #ffb2a8,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+
+$md-secundary: (50 : #f0f7f1,
+  100 : #d8ebdc,
+  200 : #bfdec4,
+  300 : #a5d0ac,
+  400 : #91c69b,
+  500 : #7ebc89,
+  600 : #76b681,
+  700 : #6bad76,
+  800 : #61a56c,
+  900 : #4e9759,
+  A100 : #f6fff8,
+  A200 : #c3ffcc,
+  A400 : #90ffa0,
+  A700 : #77ff8b,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+
+
+
+
+$primary: mat-palette($md-primary);
+$accent: mat-palette($md-secundary);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+mat-card {
+  padding: 10px !important;
+
+  mat-card-title,
+  mat-card-content {
+    padding: 0.5em;
+  }
+}

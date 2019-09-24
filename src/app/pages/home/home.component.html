@@ -1,10 +1,10 @@
-<mat-toolbar class="nav" color="primary">
+<mat-toolbar color="primary">
   <span> Base de datos de clientes</span>
   <span class="rigth"></span>
-  <span>{{count}} Registros</span>
+  <span class="count">{{count}} Registros</span>
 </mat-toolbar>
 <div class="container">
   <div class="button-row">
-    <button mat-raised-button (click)="noValidation()">Insertar</button>
+    <button mat-raised-button (click)="noValidation()" class="update">Insertar</button>
   </div>
 </div>

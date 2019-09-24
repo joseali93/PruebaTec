@@ -6,12 +6,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-  minDate = new Date(1900, 0, 1);
-  maxDate = new Date();
-  age = 18;
+  public minDate = new Date(1900, 0, 1);
+  public maxDate = new Date();
+  private age = 18;
+  public flag = false;
+
 
   public formCreate: FormGroup;
   constructor(
@@ -40,9 +42,11 @@ export class CreateComponent implements OnInit {
   }
   public update(form: FormGroup) {
     if (form.status === 'INVALID') {
+      this.flag = true;
       this.openSnackBar('Diligencia la información');
 
     } else {
+      this.flag = false;
       this.dialogRef.close(form.value);
     }
   }
