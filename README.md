@@ -1,22 +1,55 @@
 # PruebaTec
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
+Prueba para desarrollador angular, desarrollada en angular
 
-## Development server
+### Instalacion
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+PruebaTec requiere [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
 
-## Code scaffolding
+Navegue a la carpeta del proyecto e instale las dependencias requeridas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+$ cd PruebaTec
+$ npm install
+```
 
-## Build
+## Ambiente de Desarrollo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Corre el comando `ng serve` para desarrollo. Navega a `http://localhost:4200/`.
+
+```sh
+$ ng serve
+```
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Corre el comando `ng test` para ejecutar las pruebas unitarias en karma [Karma](https://karma-runner.github.io).
+
+```sh
+$ ng test
+```
+
+## Ambiente de Desarrollo
+
+Para produccion ...
+
+```sh
+$ ng build
+```
+
+### Librerias
+
+PruebaTec usa las siguientes funcionalidades.
+
+| Plugin           | README                                        |
+| ---------------- | --------------------------------------------- |
+| Forms            | [https://angular.io/guide/dynamic-form][pldb] |
+| Material Angular | [https://material.angular.io/][plgh]          |
+| HTTP             | [https://angular.io/guide/http][plgd]         |
+
+## License
+
+MIT
 
 ## Running end-to-end tests
 
