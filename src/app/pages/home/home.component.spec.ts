@@ -37,4 +37,15 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('informacion de usuarios',async(()=>{
+    expect(component.data).toBeUndefined()
+  }))
+  it('insertar usuario existente',async(()=>{
+    expect(component.insertClient({
+      birthdate: 'string',
+      firstname: 'string',
+      identification: 'string',
+      lastname: 'string',
+    }))
+  }))
 });
